@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sora',sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+}
+
+.img-fundo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 80%;
+}
+
+.degrade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(11,12,16);
+    background: linear-gradient(90deg, rgba(11,12,16,0.6) 0%, rgba(11,12,16,0.4) 50%, rgba(11,12,16,0.6) 100%);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 5%;
+    background-color: #1d1d1d80;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo-marvel {
+    width: auto;
+    height: 70%;
+    justify-self: start;
+    cursor: pointer;
+    transition: all .50s ease;
+}
+
+.spider {
+    width: auto;
+    height: 100%;
+    justify-self: center;
+    cursor: pointer;
+    transition: all .50s ease;
+}
+
+nav {
+    justify-self: end;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item a {
+    color: #f9f9f9;
+    text-transform: uppercase;
+    transition: all .25s ease;
+}
+
+.ativo a {
+    color: #EC111A;
+}
+
+.nav-item:hover a {
+    color: #EC111A;
+}
+
+.icon-menu-mobile {
+    display: none;
+    color: #f9f9f9;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    padding: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+    transition: all .50s ease;
+}
+
+
+.menu-item a {
+    color: #f9f9f9;
+    text-transform: uppercase;
+    transition: all .25s ease;
+}
+
+.menu-item:hover a {
+    color: #EC111A;
+}
+
+.menu-item.ativo a {
+    color: #EC111A;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+section img {
+    max-width: 65%;
+    height: auto;
+    object-fit: contain;
+    transition: all 40s ease;
+}
+
+.container-botao {
+    background-color: #EC111A;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 35%);
+    cursor: pointer;
+    transition: all .40s ease;
+}
+
+.trailer {
+    width: 98%;
+    height: 92%;
+    position: relative;
+    background-color: #1d1d1d;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 35%);
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .40s ease;
+}
+
+.container-botao:hover .trailer {
+    background-color: #EC111A;
+}
+
+.trailer a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #f9f9f9;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: all .40s ease;
+}
+
+.trailer i {
+    font-size: 1.5rem;
+}
+
+aside {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside .menu-lateral {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer {
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .menu-footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sociais {
+    transition: all .40s ease-in-out;
+}
+
+.sociais:hover {
+    transform: scale(1.2);
+}
+
+@media Screen and (max-width: 1000px) {
+    nav ul {
+        display: none;
+    }
+
+    .icon-menu-mobile {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+}
+
+@media Screen and (max-width: 700px) {
+    aside {
+        display: none;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    .container-botao {
+        width: 180px;
+        height: 50px;
+    }
+
+    .container-botao a {
+        font-size: 0.875rem;
+    }
+}
+
+@media Screen and (max-width: 580px) {
+    .logo-marvel {
+        height: 60%;
+    }
+
+    .spider {
+        height: 80%;
+    }
+
+    section img {
+        max-width: 75%;
+    }
+}
+
+@media Screen and (max-width: 580px) {
+    .container-botao {
+        width: 160px;
+        height: 40px;
+    }
+}
+
+@media Screen and (max-width: 450px) {
+    section img {
+        max-width: 85%;
+    }
+}
